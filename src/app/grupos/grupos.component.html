@@ -1,0 +1,30 @@
+<mat-card class="form-card">
+  <mat-card-title>Cadastro de Grupos</mat-card-title>
+
+  <form #grupoForm="ngForm" (ngSubmit)="onSubmit(grupoForm)">
+    <!-- Nome do Grupo -->
+    <mat-form-field>
+      <mat-label>Nome do Grupo</mat-label>
+      <input matInput [(ngModel)]="grupo.nome" name="nome" required />
+    </mat-form-field>
+
+    <!-- Descrição do Grupo -->
+    <mat-form-field>
+      <mat-label>Descrição</mat-label>
+      <input matInput [(ngModel)]="grupo.descricao" name="descricao" required />
+    </mat-form-field>
+
+    <!-- Selecionar Pessoa -->
+    <mat-form-field>
+      <mat-label>Selecione a Pessoa</mat-label>
+      <mat-select [(ngModel)]="grupo.pessoaid" name="pessoaid" required>
+        <mat-option *ngFor="let pessoa of pessoas" [value]="pessoa.id">{{ pessoa.nome }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Botão Salvar -->
+    <button mat-raised-button type="submit">Salvar Grupo</button>
+  </form>
+
+  <mat-card-actions>
+    <button mat-button [routerLink]="['/grupo-list']">Ver Listagem de Grupos</button>
