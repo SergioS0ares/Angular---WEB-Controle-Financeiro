@@ -68,6 +68,17 @@ Este comando iniciará o servidor de desenvolvimento e abrirá automaticamente s
 - **Adicionar Angular Material ao Projeto**: ng add @angular/material
   
 - **Adicionar Módulo com Rotas**: ng g m 'nome do módulo de roteamento' --routing
+
+## Guards
+
+Guards são usados para proteger rotas em Angular, controlando o acesso com base em condições específicas, como autenticação e autorização.
+
+### Criando um Guard
+
+Para criar um guard no Angular, utilize o comando abaixo:
+
+ng generate guard auth
+
   
 ### Lazy Loading
 
