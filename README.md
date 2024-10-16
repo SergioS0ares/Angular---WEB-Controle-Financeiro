@@ -77,7 +77,7 @@ Guards são usados para proteger rotas em Angular, controlando o acesso com base
 
 Para criar um guard no Angular, utilize o comando abaixo:
 
-ng generate guard auth
+- ng generate guard nomeDoGuard
 
   
 ### Lazy Loading
